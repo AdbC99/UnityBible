@@ -1,6 +1,6 @@
 # UnityBible
 
-Unity3D and the GPL license are fundamentally incompatible in all but the simplest use cases and since many offline bible repositories are not usable in Unity3D: an MIT licensed bible repository is required. The bible source itself is the World English Bible which is copyright free, all other components come from MIT or less restrictive licensed sources.
+Unity3D and many open sources licenses are fundamentally incompatible in all but the simplest use cases and therefore many offline bible repositories are not usable in Unity3D. An MIT licensed bible repository is required. The bible source itself is the World English Bible which is copyright free, all other components come from MIT or less restrictive licensed sources.
 
 This software is completely free and hopefully will be used in both commercial and free computer games and applications that need to deliver the bible without the complication of extensive copyright research and licensing aspects of the bible.
 
