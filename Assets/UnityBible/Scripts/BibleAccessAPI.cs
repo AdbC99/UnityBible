@@ -15,6 +15,8 @@ public class BibleAccessAPI : MonoBehaviour {
 	/// </summary>
 	private DataService dataService;
 
+	public bool addVerseNumbers = false;
+
 	/// <summary>
 	/// The book names - this list gives all the 3 letter codes for each of the books
 	/// contained. Note that this is ever so slightly different from the list contained
@@ -132,7 +134,10 @@ public class BibleAccessAPI : MonoBehaviour {
 			// Add a double line space between verses
 			if (verses.Length != 0)
 				verses += "\r\n\r\n";
-			
+
+			if (addVerseNumbers)
+				verses += verse.Verse + ". ";
+
 			verses += verse.Text;
 		}
 
@@ -213,7 +218,7 @@ public class BibleAccessAPI : MonoBehaviour {
 
 		// Next we want to grab the correct verses
 
-		var data = dataService.GetRows(verse_start, verse_end);
+		var data = dataService.GetRows(chapter_start_row + verse_start - 1, chapter_start_row + verse_end - 1);
 
 		// Glue the verses together
 		return RenderText(data);
